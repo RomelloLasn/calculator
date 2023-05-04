@@ -6,11 +6,11 @@ end_times = []
 num_days = int(input('kirjuta, mitu päeva sa töötasid:'))
 
 for i in range(num_days):
-    start_time_str = input(f"ütle töö algusaeg {i + 1} (TT:MM): ")
-    end_time_str = input(f"ütle töö lõpuaeg {i+1} (TT:MM): ")
+    start_time_str = input(f"Enter the start time for day {i + 1} (HH:MM): ")
+    end_time_str = input(f"Enter the end time for day {i + 1} (HH:MM): ")
 
-    start_time = datetime.datetime.strptime(start_time_str, "%T:%M")
-    end_time = datetime.datetime.strptime(end_time_str, "%T:%M")
+    start_time = datetime.datetime.strptime(start_time_str, "%H:%M")
+    end_time = datetime.datetime.strptime(end_time_str, "%H:%M")
 
     start_times.append(start_time)
     end_times.append(end_time)
